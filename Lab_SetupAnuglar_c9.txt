@@ -1,0 +1,69 @@
+Lab: 在 Cloud9 安裝與執行 Angular
+
+
+
+
+1.  建立一個新的 Workspace，範本請選 Node.js
+
+
+
+
+2.  安裝 Angular
+
+
+2.1 在 c9 workspace 的功能表 Window | New Terminal
+
+
+2.2 在「終端機視窗」輸入下列指令:
+npm install -g angular-cli
+
+
+
+
+3.  製作第一支 Angular 應用程式
+
+
+3.1 在 c9 workspace 的功能表 Window | New Terminal
+
+
+3.2 在「終端機視窗」輸入下列指令:
+ng new hello
+
+<Note> 主工作目錄會多出一個 hello 資料夾
+
+
+3.3 繼續輸入下列指令以啟動 Web Server 載用我們的 Angular 應用程式
+cd hello
+ng serve --host 0.0.0.0 --port 8080 --live-reload-port 8081
+
+<Note>「終端機視窗」請勿關閉。
+
+
+3.4 啟動瀏覽器，連到 https://workspace名稱-你的帳號.c9users.io，例如:
+https://njs-wchien.c9users.io
+
+<Note> 如果一切順利，畫面會出現 app works! 字樣
+
+
+3.5 編輯檔案: hello/src/app/app.component.ts，
+將下列這行:
+title = 'app works!';
+改成:
+title = 'Hello! ';
+
+
+3.6 回到瀏覽器，畫面會自動變成 Hello!
+
+
+3.7 編輯檔案: hello/src/app/app.component.html
+將下列這行:
+{{title}}
+改成:
+{{title}} Angular
+
+
+3.8 回到瀏覽器，畫面會自動變成 Hello! Angular
+
+
+3.9 回到「終端機視窗」，按 Ctrl + C 組合鍵結束網站伺服器
+
